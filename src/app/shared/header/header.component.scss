@@ -1,0 +1,8 @@
+.menu {
+  display: grid;
+  grid-template-columns: 241px 1fr;
+
+  &__info {
+    justify-content: space-between;
+  }
+}

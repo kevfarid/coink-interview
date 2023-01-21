@@ -1,0 +1,7 @@
+<app-header class="header" (clickMenu)="sidenav.toggle()"></app-header>
+<mat-sidenav-container class="dashboard" fullscreen>
+  <mat-sidenav mode="side" opened="true" class="sidebar" #sidenav>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <ng-content></ng-content>
+</mat-sidenav-container>

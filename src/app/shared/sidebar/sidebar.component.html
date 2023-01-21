@@ -1,0 +1,33 @@
+<div class="sidebar__user-info">
+  <div class="sidebar__user-info__avatar"></div>
+  <div class="sidebar__user-info__name full-center">
+    <mat-icon class="sidebar__user-info__name--icon">lock</mat-icon>
+    <span class="sidebar__user-info__name--text">John Doe</span>
+  </div>
+</div>
+<nav class="sidebar__menu">
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tarjeta Visa dispensadores </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar__nav-list">
+      <mat-list-item routerLink="/backoffice/create" routerLinkActive="active">
+        <span matLine class="sidebar__nav-list--text">Crear dispensador</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/backoffice/monitor" routerLinkActive="active">
+        <span matLine class="sidebar__nav-list--text"
+          >Monitorear y editar dispensadores</span
+        >
+      </mat-list-item>
+      <mat-list-item
+        routerLink="/backoffice/solicitud"
+        routerLinkActive="active"
+      >
+        <span matLine class="sidebar__nav-list--text">Solicitud tarjetas</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</nav>
