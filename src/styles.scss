@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-// @import './app/shared/styles/material.scss';
+@import './app/styles/material.scss';
 
 html,
 body {
@@ -11,10 +11,70 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
 .full-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.mdc-button {
+  min-width: 138px !important;
+  border-radius: 2px !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled),
+.mat-mdc-form-field-focus-overlay {
+  background-color: transparent;
+}
+
+.mdc-text-field {
+  padding: 0 !important;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.00938em;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-weight: 500 !important;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.mat-mdc-select-value-text {
+  padding-left: 0.5rem;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.mat-expansion-panel-header {
+  background-color: var(--primary-color);
+}
+
+.mat-expansion-panel-header-title {
+  color: #fff;
+}
+
+.cdk-mouse-focused {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+.mat-expansion-panel {
+  background-color: var(--primary-color);
+  border-radius: 0 !important;
+}
+
+.mat-expansion-panel-content {
+  background-color: #fff
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+  color: #fff;
 }

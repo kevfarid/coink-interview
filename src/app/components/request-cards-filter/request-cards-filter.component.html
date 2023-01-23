@@ -1,0 +1,41 @@
+<section class="filter">
+  <h2 class="filter__title"><mat-icon>search</mat-icon>Buscar</h2>
+  <form class="filter__form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <div class="filter__form__group">
+      <label class="filter__form__group--label">Nombre</label>
+      <mat-form-field class="filter__form__group--field">
+        <input matInput placeholder="Nombre" formControlName="name" />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">
+          {{ errorMessages.isRequired }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="filter__form__group">
+      <label class="filter__form__group--label">Tipo de personaje</label>
+      <mat-form-field class="filter__form__group--field">
+        <input
+          matInput
+          placeholder="Tipo de Personaje"
+          formControlName="type"
+        />
+        <mat-error *ngIf="form.get('type')?.hasError('required')">
+          {{ errorMessages.isRequired }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <mat-error *ngIf="!hasOneFilter">
+      {{ errorMessages.invalidForm }}
+    </mat-error>
+    <div class="filter__form__buttons">
+      <button
+        mat-stroked-button
+        color="primary"
+        type="reset"
+        (click)="onClearFilters()"
+      >
+        Limpiar filtros
+      </button>
+      <button mat-flat-button color="primary" type="submit">Buscar</button>
+    </div>
+  </form>
+</section>

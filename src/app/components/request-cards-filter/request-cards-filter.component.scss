@@ -1,0 +1,25 @@
+.filter {
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__form {
+    &__group {
+      display: inline-grid;
+      margin-right: 2.5rem;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

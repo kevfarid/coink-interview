@@ -1,0 +1,10 @@
+<h1>Solicitud Tarjetas</h1>
+<app-request-cards-filter (formValue)="getFilters($event)" (clearFilters)="clearFilters()"></app-request-cards-filter>
+<div class="request-cards">
+  <div class="request-cards__button">
+    <button mat-stroked-button color="primary" disabled>
+      Solicitar Tarjetas
+    </button>
+  </div>
+  <app-request-cards-table [filters]="filters"></app-request-cards-table>
+</div>
