@@ -7,6 +7,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { RequestCardsRoutingModule } from './request-cards-routing.module';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MatButtonModule } from '@angular/material/button';
+import { LayoutsModule } from 'src/app/layouts/layouts.module';
 
 @NgModule({
   declarations: [RequestCardsComponent],
@@ -17,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSortModule,
     RequestCardsRoutingModule,
     ComponentsModule,
-    MatButtonModule
+    MatButtonModule,
+    LayoutsModule
   ],
 
 })

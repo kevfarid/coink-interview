@@ -8,10 +8,11 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterService } from './services/character.service';
+import { LoginComponent } from './modules/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

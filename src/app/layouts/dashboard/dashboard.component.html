@@ -1,4 +1,4 @@
-<app-header class="header" (clickMenu)="sidenav.toggle()"></app-header>
+<app-header class="header" (clickMenu)="sidenav.toggle()" [title]="title"></app-header>
 <mat-sidenav-container class="dashboard" fullscreen>
   <mat-sidenav mode="side" opened="true" class="sidebar" #sidenav>
     <app-sidebar></app-sidebar>

@@ -1,0 +1,68 @@
+<div class="login">
+  <div class="login__image">
+    <h1 class="login__image--text login__image--title">
+      ¡Bienvenido a la herramienta de registro Coink!
+    </h1>
+    <img class="login__image--img" src="assets/login1.svg" alt="Login image" />
+    <h2 class="login__image--text">
+      Coink para tu día a día. Empieza ahorrando y cumple tus sueños con
+      propósito.
+    </h2>
+    <img class="login__image--img" src="assets/login2.svg" alt="Login image" />
+  </div>
+  <section class="login__form">
+    <span class="login__form--signup"
+      >¿Aún no tienes una cuenta?
+      <a class="login__form--link" href="/signup">Regístrate ahora</a>
+    </span>
+    <div class="login__form__container">
+      <h2 class="login__form--title">Iniciar sesión en Coink</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
+        <div class="login__form--group">
+          <label for="email">Correo electrónico</label>
+          <div class="login__form--group__input">
+            <input type="email" id="email" name="email" formControlName="email" />
+            <mat-icon class="login__form--group__input--icon">person</mat-icon>
+          </div>
+        </div>
+        <div class="login__form--group">
+          <label for="password">Contraseña</label>
+          <div class="login__form--group__input">
+            <input
+              type="{{ isPasswordVisible ? 'text' : 'password' }}"
+              id="password"
+              name="password"
+              formControlName="password"
+            />
+            <mat-icon
+              class="login__form--group__input--icon"
+              style="cursor: pointer"
+              (click)="togglePasssword()"
+              >{{
+                isPasswordVisible ? "visibility_off" : "visibility"
+              }}</mat-icon
+            >
+          </div>
+        </div>
+        <div class="login__form--remember">
+          <input type="checkbox" id="remember" name="remember" formControlName="remember" />
+          <label for="remember">Recordarme</label>
+        </div>
+        <div class="login__form--group full-center">
+          <button
+            class="login__form--button"
+            type="submit"
+            [disabled]="loginForm.invalid"
+          >
+            Iniciar sesión
+          </button>
+        </div>
+        <div class="login__form--group full-center">
+          <a class="login__form--link" href="/login"
+            >¿Olvidaste tu contraseña?</a
+          >
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

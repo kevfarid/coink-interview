@@ -1,14 +1,25 @@
 <mat-toolbar color="primary" class="menu">
   <section class="menu__logo full-center">
-    <span>Coink</span>
+    <img src="assets/logo-coink-lateral.svg" alt="Coink logo" width="110px" />
   </section>
   <section class="menu__info full-center">
-    <button mat-icon-button class="example-icon" aria-label="Menu" (click)="toggleMenu()">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Menu"
+      (click)="toggleMenu()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
     <span class="menu__info__title">{{ title }}</span>
-    <button mat-icon-button class="example-icon" aria-label="User">
+    <button mat-icon-button class="example-icon" aria-label="User" [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Salir</span>
+      </button>
+    </mat-menu>
   </section>
 </mat-toolbar>

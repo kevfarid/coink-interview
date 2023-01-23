@@ -13,7 +13,7 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatExpansionModule,
     MatListModule,
-    MatSidenavModule,
+    MatSidenavModule
   ],
   exports: [SidebarComponent],
 })
